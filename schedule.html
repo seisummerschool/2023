@@ -177,7 +177,7 @@
                         </td>
                         <td>
                             <p class="head">14:00-17:00</p>
-                            <a class="head" data-bs-placement="bottom" data-bs-content="我是内容部分">Workshop</a>
+                            <a class="head" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="我是内容部分">Workshop</a>
                         </td>
                     </tr>
                     </tbody>
@@ -187,6 +187,12 @@
             </div>
         </div>
     </div>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
     <script src="lib/js/jquery-3.3.1.js"></script>
     <script src="lib/js/popper.js"></script>
     <script src="lib/js/bootstrap.js"></script>
